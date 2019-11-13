@@ -35,19 +35,9 @@ router.get("/:id", (req, res) => {
 });
 router.get("/:id/zoos", (req, res) => {
   const { id } = req.params;
-
   Animals.findZoos(id)
-
     .then(zoos => {
-      // const animal = animals[0];
-
-      // if (animal) {
       res.json(zoos);
-      // } else {
-      //   res
-      //     .status(404)
-      //     .json({ message: "Could not find animal with given id." });
-      // }
     })
     .catch(err => {
       res.status(500).json({ message: "Failed to get animal" });

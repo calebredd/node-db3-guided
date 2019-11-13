@@ -12,8 +12,9 @@ function findById(id) {
 function findZoos(id) {
   return db("animals")
     .join("zoos", "zoos.id", "animals.zoo_id")
-    .select("zoos.id", "zoos.name", "zoos.address")
-    .where("zoos.id", id);
+    .select("animals.name", "zoos.id", "zoos.name", "zoos.address")
+    .where("animals.id", id)
+    .first();
 }
 
 function insert(animal) {
