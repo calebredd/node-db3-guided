@@ -6,3 +6,7 @@ For each animal, you must track their name, species, and all zoos in which they 
 Determine the database tables necessary to track this information.
 
 Label any relationships between table.
+
+Zoo Table with parameters of id, name, and address.
+
+Animal Table with parameters of id, name, species, and zoo array.
